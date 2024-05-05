@@ -1,4 +1,5 @@
 ---
+import "../styles/global.css";
 const pageTitle = "About Me";
 const country = "Romania";
 const skills = ["HTML", "CSS", "JavaScript", "Python", "Astro", "Writing lol"];
@@ -20,7 +21,7 @@ const skills = ["HTML", "CSS", "JavaScript", "Python", "Astro", "Writing lol"];
 
       h1 {
         color: #333;
-        font-size: 36px;
+        font-size: 4rem;
         margin-bottom: 10px;
       }
 
@@ -36,20 +37,30 @@ const skills = ["HTML", "CSS", "JavaScript", "Python", "Astro", "Writing lol"];
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 20px;
+        margin-top: 2rem;
+        position: justify-center;
       }
+
+      .dist2 {
+        margin-top: 2rem;
+    }
     </style>
   </head>
   <body>
-    <a href="/">Home</a>
+    <a href="/">Blogs</a>
     <a href="/about/">About</a>
-    <a href="/blog/">Blog</a>
+    <a href="/projects/">Projects</a>
 
-    <img class="pfp" src="/deer-pfp.jpg" alt="Profile Picture" />
+    <img
+      class="pfp"
+      src="/deer-pfp.jpg"
+      alt="Profile Picture"
+    />
 
     <h1>{pageTitle}</h1>
     <h2>... and my new Astro site!</h2>
 
-    <p>
+    <p class="dist2">
       I am working through Astro's introductory tutorial. This is the second
       page on my website, and it's the first one I built myself!
     </p>
@@ -59,8 +70,8 @@ const skills = ["HTML", "CSS", "JavaScript", "Python", "Astro", "Writing lol"];
       back and see how my journey is going!
     </p>
 
-    <p>I'm from {country}, and my skills include:</p>
-    <ul>
+    <p class="dist2">I'm from {country}, and my skills include:</p>
+    <ul class="space-y-3">
       {skills.map((skill) => <li>{skill}</li>)}
     </ul>
   </body>
